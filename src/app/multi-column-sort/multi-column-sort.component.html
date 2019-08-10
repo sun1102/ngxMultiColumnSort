@@ -1,0 +1,18 @@
+<table border="1">
+  <thead>
+    <tr >
+      <ng-container *ngFor="let head of tableHeader">
+          <td [title]="head.tooltip" (click)="onHeaderClick(head)">{{head.name}}</td>
+      </ng-container>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of tableData">
+          <td>{{user.rank}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.website}}</td>
+          <td>{{user.usercount}}</td>
+        </tr>
+  </tbody>
+</table>
